@@ -22,7 +22,6 @@ pipeline {
                 script {
                     withCredentials([string(credentialsId: 'dockerhub', variable: 'dockerhub')]) {
                     sh 'docker login -u imransetiadi22 -p ${dockerhub}'
-}
                     sh 'docker push imransetiadi22/hellodocker'
                 }
             }
